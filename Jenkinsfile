@@ -33,14 +33,14 @@ pipeline {
       }
       stage ('test') {
         steps {
-          sh 'scp target/webapp.war /usr/share/apache-tomcat-9.0.63/webapps'
+          sh 'scp target/webapp.war /home/ec2-user/'
         } 
       }
       /*stage ('deploy') {
        # steps {
         #  sshagent(['ec2-user']) {
          #   sh "hostname -I"
-          #  sh "scp target/webapp.war /home/ec2-user//usr/share/apache-tomcat-9.0.63/webapps"
+          #  sh "scp target/webapp.war usr/share/apache-tomcat-9.0.63/webapps"
            # sh "sudo su -s /bin/bash tomcat"
             #sh "cp /home/ec2-user/webapp.war /usr/share/apache-tomcat-9.0.63/webapps"
           #}
