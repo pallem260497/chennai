@@ -34,7 +34,7 @@ pipeline {
       stage ('deploy') {
         steps {
           sshagent(['ec2-user']) {
-           sh 'scp /target/webapp.war /usr/share/apache-tomcat-9.0.63/webapps/'
+           sh 'scp /home/ec2-user/webapp/target /usr/share/apache-tomcat-9.0.63/webapps/'
           }
         } 
       }
