@@ -36,7 +36,7 @@ pipeline {
           sshagent(['tomcat service']) {
             sh "hostname -I"
             sh "ip -a address"
-            sh "scp -o StrictHostKeyChecking=no /home/ec2-user/webapp/target/webapp.war /home/ec2-user/ ec2-user@18.189.193.20"
+            sh "scp -o StrictHostKeyChecking=no /home/ec2-user/webapp/target/webapp.war  ec2-user@18.189.193.20:/home/ec2-user/"
             sh "sudo su -s /bin/bash tomcat"
             sh "cp /home/ec2-user/webapp.war /usr/share/apache-tomcat-9.0.63/webapps"
           }
