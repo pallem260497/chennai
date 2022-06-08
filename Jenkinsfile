@@ -33,7 +33,7 @@ pipeline {
       }
       stage ('test') {
         steps {
-          sh 'scp /target/webapp.war ec2-user@172.31.15.68:/home/ec2-user/'
+          sh 'scp target/webapp.war /usr/share/apache-tomcat-9.0.63/webapps'
         } 
       }
       /*stage ('deploy') {
