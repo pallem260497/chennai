@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'Dev'}
+  agent any
   tools {
       jdk 'jdk11'
       git 'Default'
