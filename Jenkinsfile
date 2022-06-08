@@ -40,7 +40,7 @@ pipeline {
        # steps {
         #  sshagent(['ec2-user']) {
          #   sh "hostname -I"
-          #  sh "scp target/webapp.war ec2-user@172.31.15.68:/home/ec2-user//usr/share/apache-tomcat-9.0.63/webapps"
+          #  sh "scp target/webapp.war /home/ec2-user//usr/share/apache-tomcat-9.0.63/webapps"
            # sh "sudo su -s /bin/bash tomcat"
             #sh "cp /home/ec2-user/webapp.war /usr/share/apache-tomcat-9.0.63/webapps"
           #}
