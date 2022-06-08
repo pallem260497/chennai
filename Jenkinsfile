@@ -31,7 +31,7 @@ pipeline {
           sh 'pwd'
         } 
       }
-      stage ('maven path') {
+      stage ('deploy') {
         steps {
           sshagent(['ec2-user']) {
            // some block
