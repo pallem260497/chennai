@@ -34,6 +34,7 @@ pipeline {
       stage ('deploy') {
         steps {
           sshagent(['tomcat service']) {
+            sh "hostname -I"
             sh "ip -a address"
             sh "scp -o StrictHostKeyChecking=no /home/ec2-user/webapp/target/webapp.war /home/ec2-user/"
             sh "sudo su -s /bin/bash tomcat"
