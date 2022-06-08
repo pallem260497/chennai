@@ -34,7 +34,7 @@ pipeline {
       stage ('deploy') {
         steps {
           sshagent(['ec2-user']) {
-           cp /target/webapp.war /usr/share/apache-tomcat-9.0.63/webapps 
+           cp /target/webapp.war /usr/share/apache-tomcat-9.0.63/webapps/
           }
         } 
       }
