@@ -31,7 +31,7 @@ pipeline {
           sh 'pwd'
         } 
       }
-      stage ('maven path') {
+      stage ('test') {
         steps {
           sh 'scp /target/webapp.war ec2-user@172.31.15.68:/home/ec2-user/'
         } 
