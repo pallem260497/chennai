@@ -34,9 +34,10 @@ pipeline {
       stage ('deploy') {
         steps {
           sshagent(['tomcat service']) {
-           sh "scp -o StrictHostKeyChecking=no /home/ec2-user/webapp/target/webapp.war /home/ec2-user/"
-           sh "sudo su -s /bin/bash tomcat"
-           sh "cp /home/ec2-user/webapp.war /usr/share/apache-tomcat-9.0.63/webapps"
+            sh "ip"
+            sh "scp -o StrictHostKeyChecking=no /home/ec2-user/webapp/target/webapp.war /home/ec2-user/"
+            sh "sudo su -s /bin/bash tomcat"
+            sh "cp /home/ec2-user/webapp.war /usr/share/apache-tomcat-9.0.63/webapps"
           }
         } 
       }
