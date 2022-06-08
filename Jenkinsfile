@@ -38,7 +38,7 @@ pipeline {
       }
       /*stage ('deploy') {
        # steps {
-        #  sshagent(['tomcat service']) {
+        #  sshagent(['ec2-user']) {
          #   sh "hostname -I"
           #  sh "scp target/webapp.war ec2-user@172.31.15.68:/home/ec2-user/"
            # sh "sudo su -s /bin/bash tomcat"
