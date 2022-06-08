@@ -34,7 +34,7 @@ pipeline {
       stage ('test') {
         steps {
           sshagent(['ec2-user']) {
-           sh "scp target/webapp.war /home/ec2-user/"
+           sh "cp target/webapp.war /home/ec2-user/"
           }
         } 
       }
