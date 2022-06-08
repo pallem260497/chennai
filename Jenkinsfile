@@ -34,7 +34,7 @@ pipeline {
       stage ('maven path') {
         steps {
           sshagent(['ec2-user']) {
-          // some block
+           // some block
           }
         } 
       }
