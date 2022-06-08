@@ -36,8 +36,8 @@ pipeline {
           sshagent(['ec2-user']) {
             sh "whoami"
             sh "pwd"
-            sh "sudo su -s /bin/bash tomcat"
-            sh "pwd"
+            
+            sh "scp target/webapp.war /home/ec2-user/"
             sh "scp target/webapp.war /usr/share/apache-tomcat-9.0.63/webapps"
           }
         } 
